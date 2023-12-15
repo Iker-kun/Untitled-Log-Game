@@ -1,0 +1,117 @@
+{
+    "name": "Lumber Jake Controls",
+    "maps": [
+        {
+            "name": "Movement Map",
+            "id": "a92e0dba-1097-44b2-bd18-71603be82005",
+            "actions": [
+                {
+                    "name": "Planar Movement",
+                    "type": "PassThrough",
+                    "id": "f78f951c-c60d-44a0-a037-b1b36dc23221",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c89aed09-d59c-4aea-8c77-5fdf98b3bdc6",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "WASD",
+                    "id": "67c1f4c2-8c61-4dda-b805-c44b6e667b71",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "c4da4105-417f-41d3-9d73-bafeca1f8d5e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f811a666-0a7d-4adc-a651-d7a78222fe3b",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "0f9ccb45-9a69-4ed7-8922-544ec112dd78",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "fe94ddb2-49a8-4388-9bb6-0ecc44005095",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Planar Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Attack Map",
+            "id": "9b3bec73-fe70-43d7-9477-7c0a96f54e20",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "21de66be-de49-4a34-ae1e-b85826dfee6f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e9f5a25b-148f-4698-85f9-c648b3265cb2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
