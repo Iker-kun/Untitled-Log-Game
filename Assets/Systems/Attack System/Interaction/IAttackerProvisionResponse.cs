@@ -3,7 +3,7 @@ using InteractionSystem.Data;
 
 namespace AttackSystem.Interaction
 {
-    internal interface IAttackerInteractionResponse : IInteractionResponse
+    internal interface IAttackerProvisionResponse : IInteractionResponse
     {
         IAttacker GetAttacker();
     }

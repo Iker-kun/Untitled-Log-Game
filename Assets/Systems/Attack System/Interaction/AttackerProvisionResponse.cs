@@ -2,7 +2,7 @@
 
 namespace AttackSystem.Interaction
 {
-    internal readonly struct AttackerProvisionResponse : IAttackerInteractionResponse
+    internal readonly struct AttackerProvisionResponse : IAttackerProvisionResponse
     {
         private readonly IAttacker _attacker;
         public bool Success { get; }

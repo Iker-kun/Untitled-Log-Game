@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AttackSystem.Interaction
 {
-    internal class AttackerProvider : MonoBehaviour, IResponseOnlyInteractable<IAttackerInteractionResponse>
+    internal class AttackerProviderInteractable : MonoBehaviour, IResponseOnlyInteractable<IAttackerProvisionResponse>
     {
-        public IAttackerInteractionResponse TryInteract()
+        public IAttackerProvisionResponse TryInteract()
         {
             IAttacker attacker = GetComponent<IAttacker>();
             return new AttackerProvisionResponse(attacker, attacker != null);
