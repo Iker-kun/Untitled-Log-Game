@@ -8,11 +8,28 @@ public class MovementApplier : MonoBehaviour
     private MovementPerformer _performer;
 
     [SerializeField]
-    private PlayerMovementInputProvider _provider;
+    private PlayerMovementInputProvider _movProvider;
+
+    [SerializeField]
+    private float _baseSpeed = 1.0f;
+
+    [SerializeField]
+    private float _speedMultiplier = 1.0f;
 
     private void FixedUpdate()
     {
-        _performer.TryMove(_provider.MovementInput);
+        MovementInput completeMovement = _movProvider.MovementInput;
+        if (completeMovement.isSprinting)
+        {
+            _performer.TryMove(completeMovement.movement * _baseSpeed * _speedMultiplier);
+        }
+        else
+        {
+            _performer.TryMove(completeMovement.movement * _baseSpeed);
+        }
+
+        
+
     }
 
 }

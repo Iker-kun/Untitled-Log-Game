@@ -7,14 +7,29 @@ public class MovementPerformer : MonoBehaviour
     [SerializeField]
     private Rigidbody2D _rigidbody;
 
-    [SerializeField]
-    private float _speed = 1.0f;
+   
 
-    public bool TryMove(Vector2 movementInput)
+    public bool TryMove(Vector2 movementVelocity)
     {
-        Vector2 velocity = _speed * movementInput;
+        Vector2 velocity = movementVelocity;
 
-        _rigidbody.velocity = velocity;
+        Vector2 velocityDifference = velocity - _rigidbody.velocity;
+
+        const float ASYMPTOTIC_CONVERGENCE = 0.25f;
+        //m * dv = f * dt
+        // f = m * dv/dt
+        Vector2 movementForce = _rigidbody.mass *
+                                (velocityDifference * ASYMPTOTIC_CONVERGENCE) /
+                                Time.fixedDeltaTime;
+
+        _rigidbody.AddForce(movementForce, ForceMode2D.Force);
+
+        return true;
+    }
+
+    public bool TryDash(Vector2 dashAcceleration)
+    {
+        _rigidbody.AddForce(_rigidbody.mass * dashAcceleration,ForceMode2D.Force);
 
         return true;
     }
